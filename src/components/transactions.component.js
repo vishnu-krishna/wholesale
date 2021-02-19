@@ -16,6 +16,8 @@ const TransactionListComponent = () => {
   }, [id])
   return (
     <>
+      <h3>Transaction Details</h3>
+
       {!transactions.length && (
         <div className="text-center">
           <h2>No transactions found for this account</h2>
@@ -45,7 +47,9 @@ const TransactionListComponent = () => {
           </div>
         </div>)
       }
-      <button type="button" className="btn btn-info go-back" onClick={() => history.goBack()}>Go Back</button>
+      <div className={'button-wrapper'}>
+        <button type="button" className="form-input-btn" id={'go-back-transaction'} onClick={() => history.goBack()}>Go Back</button>
+      </div>
     </>
   )
 }

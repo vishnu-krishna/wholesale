@@ -1,120 +1,128 @@
 {
-    "users": {
-        "emailAddress": "test@anz.com",
-        "password": "123456"
+  "users": {
+    "emailAddress": "test@anz.com",
+    "password": "123456"
+  },
+  "accounts": [
+    {
+      "id": "1",
+      "firstName": "John",
+      "lastName": "Doe",
+      "email": "john@gmail.com",
+      "accountType": "Savings",
+      "accountStatus": "Open"
     },
-    "accounts": [
-        {
-            "id": "1",
-            "firstName": "John",
-            "lastName": "Doe",
-            "email": "john@gmail.com",
-            "accountType": "Savings",
-            "accountStatus": "Open"
-        },
-        {
-            "id": "2",
-            "firstName": "Mark",
-            "lastName": "Williams",
-            "email": "mark@gmail.com",
-            "accountType": "Current",
-            "accountStatus": "Open"
-        },
-        {
-            "id": "3",
-            "firstName": "Sara",
-            "lastName": "Smith",
-            "email": "sara@gmail.com",
-            "accountType": "Current",
-            "accountStatus": "Open"
-        },
-        {
-            "id": "4",
-            "firstName": "Vishnu",
-            "lastName": "Chander",
-            "email": "sara@gmail.com",
-            "accountType": "Savings",
-            "accountStatus": "Open"
-        },
-        {
-            "id": "5",
-            "firstName": "Neil",
-            "lastName": "Armstrong",
-            "email": "sara@gmail.com",
-            "accountType": "Savings",
-            "accountStatus": "Open"
-        }
-    ],
-    "transactions": [
-        {
-            "id": "1",
-            "date": "24/10/2020",
-            "transactionType": "debit",
-            "description": "some description",
-            "accountId": "1"
-        },
-        {
-            "id": "2",
-            "date": "22/10/2020",
-            "transactionType": "credit",
-            "description": "some description",
-            "accountId": "1"
-        },
-        {
-            "id": "3",
-            "date": "09/08/2020",
-            "transactionType": "credit",
-            "description": "some description",
-            "accountId": "2"
-        },
-        {
-            "id": "3",
-            "date": "09/08/2020",
-            "transactionType": "credit",
-            "description": "some description",
-            "accountId": "2"
-        },
-        {
-            "id": "3",
-            "date": "09/08/2020",
-            "transactionType": "debit",
-            "description": "some other description",
-            "accountId": "2"
-        },
-        {
-            "id": "3",
-            "date": "09/08/2020",
-            "transactionType": "debit",
-            "description": "some other description",
-            "accountId": "4"
-        },
-        {
-            "id": "4",
-            "date": "05/01/2020",
-            "transactionType": "debit",
-            "description": "some description",
-            "accountId": "3"
-        },
-        {
-            "id": "4",
-            "date": "05/01/2020",
-            "transactionType": "debit",
-            "description": "some description",
-            "accountId": "3"
-        },
-        {
-            "id": "4",
-            "date": "05/01/2020",
-            "transactionType": "credit",
-            "description": "some description",
-            "accountId": "5"
-        },
-        {
-            "id": "4",
-            "date": "05/01/2020",
-            "transactionType": "credit",
-            "description": "some description",
-            "accountId": "3"
-        }
-    ]
+    {
+      "id": "2",
+      "firstName": "Mark",
+      "lastName": "Williams",
+      "email": "mark@gmail.com",
+      "accountType": "Current",
+      "accountStatus": "Open"
+    },
+    {
+      "id": "3",
+      "firstName": "Sara",
+      "lastName": "Smith",
+      "email": "sara@gmail.com",
+      "accountType": "Current",
+      "accountStatus": "Open"
+    },
+    {
+      "id": "4",
+      "firstName": "Vishnu",
+      "lastName": "Chander",
+      "email": "sara@gmail.com",
+      "accountType": "Savings",
+      "accountStatus": "Open"
+    },
+    {
+      "id": "5",
+      "firstName": "Neil",
+      "lastName": "Armstrong",
+      "email": "sara@gmail.com",
+      "accountType": "Savings",
+      "accountStatus": "Open"
+    },
+    {
+      "firstName": "cghf",
+      "lastName": "sfhfhj",
+      "email": "a@a.com",
+      "accountType": "Savings",
+      "accountStatus": "Pending",
+      "id": "d8YVtzS"
+    }
+  ],
+  "transactions": [
+    {
+      "id": "1",
+      "date": "24/10/2020",
+      "transactionType": "debit",
+      "description": "some description",
+      "accountId": "1"
+    },
+    {
+      "id": "2",
+      "date": "22/10/2020",
+      "transactionType": "credit",
+      "description": "some description",
+      "accountId": "1"
+    },
+    {
+      "id": "3",
+      "date": "09/08/2020",
+      "transactionType": "credit",
+      "description": "some description",
+      "accountId": "2"
+    },
+    {
+      "id": "3",
+      "date": "09/08/2020",
+      "transactionType": "credit",
+      "description": "some description",
+      "accountId": "2"
+    },
+    {
+      "id": "3",
+      "date": "09/08/2020",
+      "transactionType": "debit",
+      "description": "some other description",
+      "accountId": "2"
+    },
+    {
+      "id": "3",
+      "date": "09/08/2020",
+      "transactionType": "debit",
+      "description": "some other description",
+      "accountId": "4"
+    },
+    {
+      "id": "4",
+      "date": "05/01/2020",
+      "transactionType": "debit",
+      "description": "some description",
+      "accountId": "3"
+    },
+    {
+      "id": "4",
+      "date": "05/01/2020",
+      "transactionType": "debit",
+      "description": "some description",
+      "accountId": "3"
+    },
+    {
+      "id": "4",
+      "date": "05/01/2020",
+      "transactionType": "credit",
+      "description": "some description",
+      "accountId": "5"
+    },
+    {
+      "id": "4",
+      "date": "05/01/2020",
+      "transactionType": "credit",
+      "description": "some description",
+      "accountId": "3"
+    }
+  ]
 }

@@ -35,6 +35,8 @@ const CreateAccountComponent = () => {
 
   return (
     <div className="create-account">
+      <h3>Create New Account</h3>
+
       <form id={"create-post-form"} onSubmit={handleSubmit} noValidate={true}>
         <div className="form-group col-md-12">
           <label htmlFor="firstName"> First Name </label>
@@ -64,17 +66,15 @@ const CreateAccountComponent = () => {
             }
           </select>
         </div>
-
-        <div className="create-btn-wrapper">
-          <button className="form-input-btn" type="submit" disabled={isLoading}>
-            Create Account
-          </button>
+        <div className={'button-wrapper'}>
+          <button type="button" className="form-input-btn" id={'go-back'} onClick={() => history.goBack()}>Go Back</button>
+          <button className="form-input-btn" id={'create-new'} type="submit" disabled={isLoading}> Create Account</button>
         </div>
+
       </form>
       {isAccountCreationFailed && (<small className="text-danger" role="alert">
         New Account Creation failed.
       </small>)}
-      <button type="button" className="btn btn-info go-back" onClick={() => history.goBack()}>Go Back</button>
     </div>
   )
 }

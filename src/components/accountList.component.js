@@ -18,6 +18,8 @@ const AccountListComponent = () => {
   }
   return (
     <>
+      <h3>Account List</h3>
+
       {!accounts.length && (
         <div className="text-center">
           <h2>No Accounts found at the moment</h2>
@@ -45,7 +47,7 @@ const AccountListComponent = () => {
                 <td>{account.accountType}</td>
                 <td>{account.accountStatus}</td>
                 <td>
-                  <button type="button" className="btn btn-info" onClick={() => handleClick(account.id)}>View Transactions</button>
+                  <button type="button" className="form-input-btn" onClick={() => handleClick(account.id)}>View Transactions</button>
                 </td>
               </tr>
             )}
@@ -53,7 +55,10 @@ const AccountListComponent = () => {
           </table>
         </div>
       </div>)}
-      <button type="button" className="btn btn-info go-back" onClick={() => history.goBack()}>Go Back</button>
+      <div className={'button-wrapper'}>
+        <button type="button" className="form-input-btn" id={'go-back'} onClick={() => history.goBack()}>Go Back</button>
+        <button type="button" className="form-input-btn" id={'create-new'} onClick={() => history.push('/create')}> Create New Account</button>
+      </div>
 
     </>
   )

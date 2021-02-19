@@ -1,4 +1,8 @@
 {
+    "users": {
+        "emailAddress": "test@anz.com",
+        "password": "123456"
+    },
     "accounts": [
         {
             "id": "1",
@@ -23,30 +27,92 @@
             "email": "sara@gmail.com",
             "accountType": "Current",
             "accountStatus": "Open"
+        },
+        {
+            "id": "4",
+            "firstName": "Vishnu",
+            "lastName": "Chander",
+            "email": "sara@gmail.com",
+            "accountType": "Savings",
+            "accountStatus": "Open"
+        },
+        {
+            "id": "5",
+            "firstName": "Neil",
+            "lastName": "Armstrong",
+            "email": "sara@gmail.com",
+            "accountType": "Savings",
+            "accountStatus": "Open"
         }
     ],
     "transactions": [
         {
             "id": "1",
+            "date": "24/10/2020",
             "transactionType": "debit",
             "description": "some description",
             "accountId": "1"
         },
         {
             "id": "2",
+            "date": "22/10/2020",
             "transactionType": "credit",
             "description": "some description",
             "accountId": "1"
         },
         {
             "id": "3",
+            "date": "09/08/2020",
             "transactionType": "credit",
             "description": "some description",
             "accountId": "2"
         },
         {
-            "id": "4",
+            "id": "3",
+            "date": "09/08/2020",
+            "transactionType": "credit",
+            "description": "some description",
+            "accountId": "2"
+        },
+        {
+            "id": "3",
+            "date": "09/08/2020",
             "transactionType": "debit",
+            "description": "some other description",
+            "accountId": "2"
+        },
+        {
+            "id": "3",
+            "date": "09/08/2020",
+            "transactionType": "debit",
+            "description": "some other description",
+            "accountId": "4"
+        },
+        {
+            "id": "4",
+            "date": "05/01/2020",
+            "transactionType": "debit",
+            "description": "some description",
+            "accountId": "3"
+        },
+        {
+            "id": "4",
+            "date": "05/01/2020",
+            "transactionType": "debit",
+            "description": "some description",
+            "accountId": "3"
+        },
+        {
+            "id": "4",
+            "date": "05/01/2020",
+            "transactionType": "credit",
+            "description": "some description",
+            "accountId": "5"
+        },
+        {
+            "id": "4",
+            "date": "05/01/2020",
+            "transactionType": "credit",
             "description": "some description",
             "accountId": "3"
         }

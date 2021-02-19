@@ -1,42 +1,172 @@
-.App {
-  text-align: center;
+@import 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css';
+
+@import url('https://fonts.googleapis.com/css?family=Fira+Sans:400,500,600,700,800');
+
+* {
+    box-sizing: border-box;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+body {
+    background: #1C8EF9 !important;
+    min-height: 100vh;
+    display: flex;
+    font-weight: 400;
+    font-family: 'Fira Sans', sans-serif;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+h1, h2, h3, h4, h5, h6, label, span {
+    font-weight: 500;
+    font-family: 'Fira Sans', sans-serif;
 }
 
-.App-title {
-  font-size: 1.5em;
+body, html, .App, #root, .auth-wrapper {
+    width: 100%;
+    height: 100%;
 }
 
-.App-intro {
-  font-size: large;
+.navbar-light {
+    background-color: #FFFFFF;
+    box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.auth-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: left;
 }
 
-button {
-  width: 30px;
-  height: 30px;
-  text-align: center;
-  margin: 10px;
-  background-color: #444;
-  border: none;
-  color: white;
+.login {
+    width: 450px;
+    margin: auto;
+    background: #FFFFFF;
+    box-shadow: 0px 14px 80px rgba(34, 35, 58, 0.2);
+    padding: 40px 55px 45px 55px;
+    border-radius: 15px;
+    transition: all .3s;
 }
+
+.go-back {
+    display: flex;
+    justify-content: center;
+    width: 200px;
+    align-self: center;
+}
+
+.create-account {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    align-self: center;
+}
+
+.auth-wrapper .form-control:focus {
+    border-color: #167BFF;
+    box-shadow: none;
+}
+
+.auth-wrapper h3 {
+    text-align: center;
+    margin: 0;
+    line-height: 1;
+    padding-bottom: 20px;
+}
+
+.custom-control-label {
+    font-weight: 400;
+}
+
+.forgot-password,
+.forgot-password a {
+    text-align: right;
+    font-size: 13px;
+    padding-top: 10px;
+    color: #7F7D7D;
+    margin: 0;
+}
+
+.forgot-password a {
+    color: #167BFF;
+}
+
+
+.form-input-btn {
+    width: 100%;
+    height: 50px;
+    margin-top: 10px;
+    border-radius: 2px;
+    background: linear-gradient(
+            90deg,
+            rgb(39, 176, 255) 0%,
+            rgb(0, 232, 236) 100%
+    );
+    outline: none;
+    border: none;
+    color: #FFFFFF;
+    font-size: 1rem;
+}
+
+.form-input-btn:hover {
+    cursor: pointer;
+    background: linear-gradient(
+            90deg,
+            rgb(39, 143, 255) 0%,
+            rgb(12, 99, 250) 100%
+    );
+    transition: all 0.4s ease-out;
+}
+
+.form-input-btn:disabled {
+    cursor: no-drop;
+    background: gray;
+}
+
+.create-btn-wrapper {
+    display: flex;
+    width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*.App {*/
+/*    text-align: center;*/
+/*}*/
+
+/*.App-logo {*/
+/*    animation: App-logo-spin infinite 20s linear;*/
+/*    height: 80px;*/
+/*}*/
+
+/*.App-header {*/
+/*    background-color: #222222;*/
+/*    height: 150px;*/
+/*    padding: 20px;*/
+/*    color: white;*/
+/*}*/
+
+/*.App-title {*/
+/*    font-size: 1.5em;*/
+/*}*/
+
+/*.App-intro {*/
+/*    font-size: large;*/
+/*}*/
+
+/*@keyframes App-logo-spin {*/
+/*    from {*/
+/*        transform: rotate(0deg);*/
+/*    }*/
+/*    to {*/
+/*        transform: rotate(360deg);*/
+/*    }*/
+/*}*/
+
+/*button {*/
+/*    width: 30px;*/
+/*    height: 30px;*/
+/*    text-align: center;*/
+/*    margin: 10px;*/
+/*    background-color: #444444;*/
+/*    border: none;*/
+/*    color: white;*/
+/*}*/

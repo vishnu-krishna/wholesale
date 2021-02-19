@@ -1,35 +1,37 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import { Provider } from "react-redux";
-import configureStore from "./store";
+import React, { Component } from "react"
+import "./App.css"
+import { Provider } from "react-redux"
+import configureStore from "./store"
+import LoginComponent from "./components/login.component"
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom"
+import HomeComponent from "components/accountList.component"
+import TransactionListComponent from "./components/transactions.component"
+import CreateAccountComponent from "./components/createAccount.component"
 
-import CounterComponent from "./components/counter";
-
-const store = configureStore();
+const store = configureStore()
 
 class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <div className="App">
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h1 className="App-title">Welcome to CRA-REDUX-SAGA-TEMPLATE</h1>
-          </header>
-          <p className="App-intro">
-            Try the 1 second delayed counter below. All powererd by
-            <b> Create-React-App, Redux, Redux-Saga</b>
-          </p>
-          <p>
-            Try clicking the Button below with the Redux Chrome Extension
-            Installed
-          </p>
-          <CounterComponent />
-        </div>
+
+        <Router>
+          <div className="App">
+            <div className="auth-wrapper">
+              <Switch>
+                <Route exact path='/' component={LoginComponent}/>
+                <Route path="/sign-in" component={LoginComponent}/>
+                <Route path="/home" component={HomeComponent}/>
+                <Route path="/create" component={CreateAccountComponent}/>
+                <Route path="/transactions/:id" component={TransactionListComponent}/>
+              </Switch>
+            </div>
+            {/*</div>*/}
+          </div>
+        </Router>
       </Provider>
-    );
+    )
   }
 }
 
-export default App;
+export default App

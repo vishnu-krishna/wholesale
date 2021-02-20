@@ -9,12 +9,11 @@ import { createAccountApi } from "Api"
 
 export function* createAccountCall(action) {
   const { formData, history } = action.payload
+  const response = yield call(createAccountApi, formData)
   yield put({
     type: CREATE_ACCOUNT_CALL_STARTED
   })
   yield delay(1000) // Fake Delay
-  const response = yield call(createAccountApi, formData)
-
   // Instructing middleware to dispatch corresponding action.
   if (response && response.data && response.data.id) {
     yield put({

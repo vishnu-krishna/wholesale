@@ -8,7 +8,6 @@ const TransactionListComponent = () => {
   const history = useHistory()
   const dispatch = useDispatch()
 
-  // const [transactions, setTransactions] = useState([])
   const transactions = useSelector(state => state.transactionListReducer.transactions)
 
   useEffect(() => {

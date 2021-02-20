@@ -5,7 +5,7 @@ import configureStore from "./store"
 import LoginComponent from "components/Login/login.component"
 import { MemoryRouter, Route, Switch } from "react-router-dom"
 import HomeComponent from "components/accountList/accountList.component"
-import TransactionListComponent from "components/transactionList/transactions.component"
+import TransactionListComponent from "components/transactionList/transactionList.component"
 import CreateAccountComponent from "components/createAccount/createAccount.component"
 
 const store = configureStore()

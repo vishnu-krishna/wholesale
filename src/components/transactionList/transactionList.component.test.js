@@ -5,7 +5,7 @@ import { Router } from "react-router-dom"
 import React from "react"
 import { createBrowserHistory } from "history"
 import { transactionListReducer } from "reducers/transactionListReducer/transactionListReducer"
-import TransactionListComponent from "components/transactionList/transactions.component"
+import TransactionListComponent from "components/transactionList/transactionList.component"
 
 const doRender = (
   transactions = []

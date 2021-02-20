@@ -1,6 +1,13 @@
-import { LOGIN_CALL_COMPLETED, LOGIN_CALL_STARTED, LOGIN_FAILURE, LOGIN_SUCCESS } from "actions/actions"
-import { call, delay, put } from "redux-saga/effects"
+import {
+  FETCH_TRANSACTIONS,
+  LOGIN_CALL_COMPLETED,
+  LOGIN_CALL_STARTED,
+  LOGIN_FAILURE,
+  LOGIN_SUCCESS
+} from "actions/actions"
+import { call, delay, put, takeEvery } from "redux-saga/effects"
 import { loginUserApi } from "Api"
+import { fetchTransactionsCall } from "sagas/transactionListSaga/transactionListSaga"
 
 export function* loginCall(action) {
   const userData = yield call(loginUserApi)
@@ -11,7 +18,7 @@ export function* loginCall(action) {
   })
   yield delay(1000) // Fake Delay
 
-  // Instructing middleware to dispatch corresponding action.
+
   if (email === emailAddress && typedPassword === password) {
     yield put({
       type: LOGIN_SUCCESS
@@ -31,6 +38,6 @@ export function* loginCall(action) {
 }
 
 export function* login(value) {
-  yield call(loginCall, value)
+  yield takeEvery(FETCH_TRANSACTIONS, fetchTransactionsCall)
 }
 

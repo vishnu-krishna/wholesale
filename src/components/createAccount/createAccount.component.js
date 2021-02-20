@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { withRouter } from 'react-router-dom'
 import { useHistory } from "react-router"
 import useForm from "hooks/useForm"
 import { validateAccountCreation } from "validation/validateInfo"
@@ -59,16 +58,17 @@ const CreateAccountComponent = () => {
         <div className="form-group col-md-12">
           <label htmlFor="accountType"> Account Type </label>
           <select className="form-control"
-                  onChange={e => setAccountTypeInput(e.target.value)}
-                  value={accountTypeInput}>
+                  onChange={event => setAccountTypeInput(event.target.value)}
+                  value={accountTypeInput} data-testid={'select'}>
             {
-              accountTypeOptions.map((accountType, key) => <option value={key}>{accountType}</option>)
+              accountTypeOptions.map((accountType, key) =>
+                <option value={key} key={accountType + key} data-testid={'select-option'}>{accountType}</option>)
             }
           </select>
         </div>
         <div className={'button-wrapper'}>
           <button type="button" className="form-input-btn" id={'go-back'} onClick={() => history.goBack()}>Go Back</button>
-          <button className="form-input-btn" id={'create-new'} type="submit" disabled={isLoading}> Create Account</button>
+          <button className="form-input-btn" id={'create-new'} type="submit" disabled={isLoading}>Create Account</button>
         </div>
 
       </form>
@@ -79,7 +79,7 @@ const CreateAccountComponent = () => {
   )
 }
 
-export default withRouter(CreateAccountComponent)
+export default CreateAccountComponent
 
 
 

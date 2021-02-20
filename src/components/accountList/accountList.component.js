@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import { useHistory } from "react-router"
-import { withRouter } from "react-router-dom"
 import { useDispatch, useSelector } from "react-redux"
 import { fetchAccountsAction } from "actions/actions"
 
@@ -57,11 +56,11 @@ const AccountListComponent = () => {
       </div>)}
       <div className={'button-wrapper'}>
         <button type="button" className="form-input-btn" id={'go-back'} onClick={() => history.goBack()}>Go Back</button>
-        <button type="button" className="form-input-btn" id={'create-new'} onClick={() => history.push('/create')}> Create New Account</button>
+        <button type="button" className="form-input-btn" id={'create-new'} onClick={() => history.push('/create')}>Create New Account</button>
       </div>
 
     </>
   )
 }
 
-export default withRouter(AccountListComponent)
+export default AccountListComponent

@@ -10,7 +10,6 @@ const LoginComponent = () => {
   const history = useHistory()
   const isLoginSuccess = useSelector(state => state.loginReducer.isLoginSuccess)
   const isLoginLoading = useSelector(state => state.loginReducer.isLoginLoading)
-
   const handleFormSubmission = () => {
     dispatch(loginAction(values, history))
   }
@@ -36,7 +35,7 @@ const LoginComponent = () => {
         </div>
         {errors.password && <small className="text-danger" role="alert">{errors.password}</small>}
 
-        <button type="submit" className="form-input-btn" disabled={isLoginLoading}>Submit</button>
+        <button type="submit" className="form-input-btn" disabled={isLoginLoading} data-testid={'login-submit'}>Submit</button>
       </form>
       <br/>
       {isLoginSuccess === false && (<small className="text-danger" role="alert">

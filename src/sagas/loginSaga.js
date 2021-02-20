@@ -1,5 +1,5 @@
-import { LOGIN_CALL, LOGIN_CALL_COMPLETED, LOGIN_CALL_STARTED, LOGIN_FAILURE, LOGIN_SUCCESS } from "actions/actions"
-import { call, delay, put, takeEvery } from "redux-saga/effects"
+import { LOGIN_CALL_COMPLETED, LOGIN_CALL_STARTED, LOGIN_FAILURE, LOGIN_SUCCESS } from "actions/actions"
+import { call, delay, put } from "redux-saga/effects"
 import { loginUserApi } from "Api"
 
 export function* loginCall(action) {
@@ -30,7 +30,7 @@ export function* loginCall(action) {
   }
 }
 
-export function* login() {
-  yield takeEvery(LOGIN_CALL, loginCall)
+export function* login(value) {
+  yield call(loginCall, value)
 }
 

@@ -1,13 +1,6 @@
-import {
-  FETCH_TRANSACTIONS,
-  LOGIN_CALL_COMPLETED,
-  LOGIN_CALL_STARTED,
-  LOGIN_FAILURE,
-  LOGIN_SUCCESS
-} from "actions/actions"
+import { LOGIN_CALL, LOGIN_CALL_COMPLETED, LOGIN_CALL_STARTED, LOGIN_FAILURE, LOGIN_SUCCESS } from "actions/actions"
 import { call, delay, put, takeEvery } from "redux-saga/effects"
 import { loginUserApi } from "Api"
-import { fetchTransactionsCall } from "sagas/transactionListSaga/transactionListSaga"
 
 export function* loginCall(action) {
   const userData = yield call(loginUserApi)
@@ -38,6 +31,6 @@ export function* loginCall(action) {
 }
 
 export function* login(value) {
-  yield takeEvery(FETCH_TRANSACTIONS, fetchTransactionsCall)
+  yield takeEvery(LOGIN_CALL, loginCall)
 }
 

@@ -10,8 +10,11 @@
         "axios": "^0.21.1",
         "bootstrap": "^4.6.0",
         "connected-react-router": "^6.8.0",
+        "express": "^4.17.1",
         "history": "^5.0.0",
         "json-server": "^0.16.3",
+        "nodemon": "^2.0.7",
+        "path": "^0.12.7",
         "react": "^17.0.1",
         "react-dom": "^17.0.1",
         "react-redux": "^7.2.2",
@@ -23,13 +26,14 @@
         "web-vitals": "^1.0.1"
     },
     "scripts": {
-        "start": "react-scripts start",
+        "local-start": "react-scripts start",
         "build": "react-scripts build",
         "test": "react-scripts test",
         "test-coverage": "react-scripts test --coverage",
         "test-update": "react-scripts test --u",
         "eject": "react-scripts eject",
-        "apiserver": "json-server --watch --port 4000 api/db.json"
+        "apiserver": "json-server --watch --port 4000 api/db.json --routes routes.json",
+        "start": "npm run build && NODE_ENV=prod && nodemon server.js && start http://localhost:3001"
     },
     "jest": {
         "transformIgnorePatterns": [

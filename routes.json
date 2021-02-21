@@ -1,0 +1,5 @@
+{
+    "/db/users": "/users",
+    "/db/accounts": "/accounts",
+    "/db/accounts/:id/transactions": "/accounts/:id/transactions"
+}

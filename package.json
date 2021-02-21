@@ -33,7 +33,7 @@
         "test-update": "react-scripts test --u",
         "eject": "react-scripts eject",
         "apiserver": "json-server --watch --port 4000 api/db.json --routes routes.json",
-        "start": "npm run build && NODE_ENV=prod && nodemon server.js && start http://localhost:3001"
+        "start": "npm run build && NODE_ENV=prod && nodemon server.js"
     },
     "jest": {
         "transformIgnorePatterns": [

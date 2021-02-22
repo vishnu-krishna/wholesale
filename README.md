@@ -2,6 +2,8 @@
 
 [Wholesale Project]https://wholesale-project.herokuapp.com/ )
 
+![2021-02-22 11 45 28](https://user-images.githubusercontent.com/19182523/108644894-f70bd980-7504-11eb-89d3-945de19c4d13.gif)
+
 ## Unit test coverage
 
 <img width="574" alt="image" src="https://user-images.githubusercontent.com/19182523/108642546-f0c43000-74f9-11eb-85a9-8ecd439eb3ee.png">
